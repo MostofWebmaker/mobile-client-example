@@ -1,7 +1,6 @@
 import * as SecureStore from 'expo-secure-store'
 import { AsyncStorage } from "react-native"
 
-
 const AUTH_TOKEN = 'AUTH_TOKEN'
 const REFRESH_TOKEN = 'REFRESH_TOKEN'
 const FCM_TOKEN = 'FCM_TOKEN'
@@ -77,17 +76,9 @@ export const getRefreshToken = async () => {
 
 export const getFcmToken = async () => {
     try {
-        // if (fcmToken) {
-        //     return await Promise.resolve(fcmToken);
-        // }
 
         fcmToken = await AsyncStorage.getItem(FCM_TOKEN);
         console.log('fcmToken getter', fcmToken)
-
-        // if (!fcmToken) {
-        //     fcmToken = await firebase.messaging().getToken();
-        //     await setFcmToken(fcmToken)
-        // }
     } catch (e) {
         console.log('error', error)
     }
@@ -110,8 +101,6 @@ export const signIn = async (newToken, newRefreshToken) => {
         refreshToken = newRefreshToken;
         await AsyncStorage.setItem(AUTH_TOKEN, newToken);
         await AsyncStorage.setItem(REFRESH_TOKEN, newRefreshToken)
-        // console.log('newToken in signIN', newToken )
-        // console.log('newRefreshToken in signIN', newRefreshToken )
     } catch (error) {
         console.log('error', error)
     }

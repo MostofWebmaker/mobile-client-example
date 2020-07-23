@@ -24,8 +24,6 @@ const Login = ({navigation}) => {
     const [loginMutation, { loading, error }] = useMutation(userLogin, {
         onCompleted: async({ login }) => {
             if (login.token && login.refresh_token) {
-                /*console.log('token', login.token )
-                console.log('refresh_token', login.refresh_token )*/
                 await signIn(login.token, login.refresh_token)
                 const fcmToken = await getFcmToken()
                 if (fcmToken) {

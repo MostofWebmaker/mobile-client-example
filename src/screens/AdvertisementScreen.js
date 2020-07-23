@@ -147,7 +147,6 @@ const styles = StyleSheet.create({
     padding: 5,
     marginBottom: 5,
     textAlign: 'center'
-    //fontFamily: 'OpenRegular'
   },
   textarea: {
       padding: 10,
@@ -165,7 +164,6 @@ const styles = StyleSheet.create({
       alignItems: 'center'
   },
   loading: {
-      //fontFamily: 'OpenBold'
   },
   price: {
       fontWeight: "bold",
@@ -177,7 +175,6 @@ const styles = StyleSheet.create({
       marginBottom: 5
   },
   cat: {
-     // fontWeight: "bold",
       marginBottom: 5
   },
   catText: {

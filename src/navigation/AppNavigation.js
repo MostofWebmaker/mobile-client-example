@@ -37,7 +37,6 @@ import {EditAdvertisementScreen} from "../screens/EditAdvertisementScreen"
         defaultNavigationOptions: {
         headerStyle: {
           backgroundColor: THEME.MAIN_COLOR,
-          //marginTop: 30, // отступ от верха экрана
         },
         headerTintColor: '#fff'
         }
@@ -168,15 +167,12 @@ import {EditAdvertisementScreen} from "../screens/EditAdvertisementScreen"
     )
 
     const CustomDrawerContentComponent = (props) => (
-        // <ScrollView>
         <View>
             <View style={styles.container}>
                <Text style={styles.text}>  <Ionicons name='ios-person' size={25} style={styles.wrapper}/> {props.navigation.getParam('fio', 'Пользователь')} </Text>
             </View>
             <DrawerItems {...props} />
         </View>
-
-        // </ScrollView>
     )
 
     const styles = StyleSheet.create({

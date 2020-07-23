@@ -70,9 +70,6 @@ const Loading = ({navigation}) => {
         }
         useEffect(() => {
             loadTokens().then(() => {
-                console.log('tokenSaved!!!', tokenSaved)
-                console.log('refreshTokenSaved!!!', refreshTokenSaved)
-                console.log('fcmToken!!!', fcmToken)
                 setTokenValue(tokenSaved)
                 setRefreshTokenValue(refreshTokenSaved)
                 setIsLoadTokens(true)
@@ -134,11 +131,9 @@ const styles = StyleSheet.create({
         margin: 20
     },
     loading: {
-        //fontFamily: 'OpenBold'
     },
     loadingError: {
         fontWeight: "bold"
-        //fontFamily: 'OpenBold'
     },
     container: {
         flex: 1,
